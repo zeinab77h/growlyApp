@@ -2,10 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
-
-export const metadata = {
-  title: "Enter Password | Growly",
-};
+import Button from "../../../../components/Button";
 
 export default function LoginPasswordPage() {
   const router = useRouter();
@@ -20,21 +17,38 @@ export default function LoginPasswordPage() {
   }
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-white shadow rounded p-6">
-      <h1 className="text-xl font-semibold mb-2">ورود</h1>
-      <p className="text-sm text-gray-600 mb-4">{phone && `شماره: ${phone}`}</p>
-      <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
-        <input
-          className="border rounded px-3 py-2"
-          type="password"
-          placeholder="رمز عبور"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="bg-black text-white rounded px-3 py-2" type="submit">
-          ورود
-        </button>
-      </form>
+    <div className="h-screen bg-white flex flex-col items-center justify-center px-6 py-6 overflow-hidden">
+      <div className="flex flex-col items-center justify-center flex-1 max-w-sm w-full">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-xl font-bold text-gray-800 mb-2">
+            ورود
+          </h1>
+          <p className="text-gray-600 text-sm">
+            {phone && `شماره: ${phone}`}
+          </p>
+        </div>
+
+        {/* Form */}
+        <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
+          <div className="text-right">
+            <label className="text-gray-700 text-sm font-medium block mb-2">
+              رمز عبور خودت رو وارد کن
+            </label>
+            <input
+              className="border-2 border-gray-200 rounded-xl px-4 py-4 text-base focus:border-growly-green focus:outline-none transition-colors w-full"
+              type="password"
+              placeholder="رمز عبور"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          
+          <Button type="submit">
+            ورود
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }
