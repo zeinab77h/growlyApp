@@ -13,7 +13,7 @@ export default function WelcomePage() {
       <div className="flex flex-col items-center justify-center flex-1 max-w-sm w-full">
         {/* Logo section */}
         <div className="flex flex-col items-center mb-4">
-          <img src="/logo.png" alt="logo-3x" width={64} className="mb-2"/>
+          <img src="/logo.png" alt="logo-growly" width={64} className="mb-2"/>
         </div>
 
         {/* Heading */}
