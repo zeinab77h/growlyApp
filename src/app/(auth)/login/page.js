@@ -13,8 +13,16 @@ export default function AuthPage() {
     e.preventDefault();
     if (!phone) return;
     const normalized = phone.replace(/\D/g, "");
+    
     // TODO: Check if user exists and route accordingly
+    // فعلاً برای تست، فرض می‌کنیم کاربر موجود است و مستقیماً به پسورد می‌رویم
+    // بعداً اینجا API چک می‌کنیم که آیا کاربر موجود است یا نه
+    
+    // اگر کاربر موجود است -> صفحه پسورد
     router.push(`/login/password?phone=${encodeURIComponent(normalized)}`);
+    
+    // اگر کاربر جدید است -> صفحه OTP برای ثبت نام
+    // router.push(`/signup/OTP?phone=${encodeURIComponent(normalized)}&flow=signup`);
   }
 
   return (
