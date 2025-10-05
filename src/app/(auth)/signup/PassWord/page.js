@@ -21,7 +21,7 @@ export default function SignupPasswordPage() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!phone || !password || !confirmPassword) return;
-    
+
     // چک کردن تطابق رمز عبور و تایید آن
     if (password !== confirmPassword) {
       alert("رمز عبور و تایید آن یکسان نیستند");
@@ -55,16 +55,24 @@ export default function SignupPasswordPage() {
           <PassInput
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="رمز عبور"
+            placeholder="Password"
           />
 
-          <PassInput
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="تایید رمز عبور"
-          />
-
-          <Button type="submit">تکمیل ثبت نام</Button>
+          <div className="space-y-2 mr-2">
+            <div className="flex items-center gap-2 text-xs text-foreground">
+              <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+              <span>شامل عدد</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-foreground">
+              <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+              <span>حداقل ۸ حرف</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-foreground">
+              <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+              <span>شامل یک حرف بزرگ و کوچک</span>
+            </div>
+          </div>
+          <Button type="submit">ورود</Button>
         </form>
       </div>
     </div>

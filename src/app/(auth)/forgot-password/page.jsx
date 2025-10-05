@@ -44,10 +44,10 @@ export default function ForgotPasswordPage() {
       <div className="h-screen bg-white flex flex-col items-center justify-center px-6 py-6 overflow-hidden">
         <div className="flex flex-col items-center justify-center flex-1 max-w-sm w-full">
           <div className="text-center mb-8">
-            <h1 className="text-xl font-bold text-gray-800 mb-6">
+            <h1 className="text-xl font- text-foreground mb-6">
               بازیابی رمز عبور
             </h1>
-            <p className="text-sm">
+            <p className="text-sm text-foreground">
               رمز عبور جدید خودت رو وارد کن
             </p>
           </div>
@@ -60,17 +60,17 @@ export default function ForgotPasswordPage() {
             />
 
             {/* Password Requirements */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            <div className="space-y-2 mr-2">
+              <div className="flex items-center gap-2 text-xs text-foreground">
+                <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
                 <span>شامل عدد</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
                 <span>حداقل ۸ حرف</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
                 <span>شامل یک حرف بزرگ و کوچک</span>
               </div>
             </div>
