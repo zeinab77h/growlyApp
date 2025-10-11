@@ -6,6 +6,7 @@
   --growly-green: #0B834F;
   --growly-green-hover: #0A6B3F;
   --growly-green-active: #095A35;
+  --growly-gray: #747474;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-growly-green: var(--growly-green);
   --color-growly-green-hover: var(--growly-green-hover);
   --color-growly-green-active: var(--growly-green-active);
+  --color-growly-gray: var(--growly-gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

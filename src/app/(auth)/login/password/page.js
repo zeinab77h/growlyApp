@@ -21,7 +21,7 @@ export default function LoginPasswordPage() {
     e.preventDefault();
     if (!phone || !password) return;
     // 🔗 اینجا بعداً API لاگین رو صدا می‌زنیم
-    router.push("/dashboard");
+    router.push("/field");
   }
 
   return (
